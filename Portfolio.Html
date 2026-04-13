@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Abderahman | Back-End Developer</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+body {
+    background: #0f172a;
+    color: white;
+    scroll-behavior: smooth;
+}
+
+/* HERO */
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.hero h1 {
+    font-size: 3rem;
+}
+
+.hero span {
+    color: #38bdf8;
+}
+
+/* CARDS */
+.box {
+    background: #1e293b;
+    padding: 20px;
+    border-radius: 15px;
+    transition: 0.3s;
+    height: 100%;
+}
+
+.box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+}
+
+/* SECTION TITLE */
+.section-title {
+    margin-bottom: 30px;
+    color: #38bdf8;
+}
+
+/* NAV */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* FADE EFFECT */
+.fade-in {
+    animation: fadeIn 1.2s ease-in;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(20px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-dark bg-dark px-4">
+    <a class="navbar-brand" href="#">Portfolio</a>
+    <div>
+        <a href="#about" class="text-white mx-2">About</a>
+        <a href="#projects" class="text-white mx-2">Projects</a>
+        <a href="#contact" class="text-white mx-2">Contact</a>
+    </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero fade-in">
+    <h1>Hi, I'm <span>Abderahman</span></h1>
+    <h4>Back-End Developer (.NET)</h4>
+    <p>I build scalable web applications using ASP.NET Core & SQL Server</p>
+
+    <div>
+        <a href="#projects" class="btn btn-info btn-custom">View Projects</a>
+        <a href="#contact" class="btn btn-outline-info btn-custom">Contact Me</a>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="container my-5 fade-in">
+    <h2 class="section-title">About Me</h2>
+
+    <div class="box">
+        <p>
+            I'm a Computer Science student, expected to graduate in 2027.
+            I specialize in Back-End Development using ASP.NET Core MVC & Web API.
+        </p>
+
+        <p>
+           I am a Back-End Developer with hands-on experience in ASP.NET Core MVC and Web API development, using Entity Framework Core and SQL Server. I build real-world applications with authentication, authorization, and full CRUD operations.
+        </p>
+    </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="container my-5 fade-in">
+    <h2 class="section-title">Projects</h2>
+
+    <div class="row g-4">
+
+        <div class="col-md-4">
+            <div class="box">
+                <h4>Employee System</h4>
+                <p>CRUD + Search + Pagination + Login System using ASP.NET MVC</p>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="box">
+                <h4>Student & Department</h4>
+                <p>EF Core Code First + Relationships + AJAX Search + Validation</p>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="box">
+                <h4>T-Shirt Store</h4>
+                <p>E-commerce project with Cart, Checkout & Payment pages</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- SKILLS -->
+<section class="container my-5 fade-in">
+    <h2 class="section-title">Skills</h2>
+
+    <div class="box">
+        <p><b>Backend:</b> C#, ASP.NET Core (MVC & Web API), Entity Framework Core, LINQ
+</p>
+        <p><b>Database:</b> SQL Server, LINQ</p>
+        <p><b>Tools:</b> Visual Studio, Git, GitHub</p>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="container my-5 fade-in">
+    <h2 class="section-title">Contact</h2>
+
+    <div class="box text-center">
+        <p>Let's work together 🚀</p>
+
+        <a href="mailto:apderahmanweal@gmail.com" class="btn btn-info m-1">Email</a>
+        <a href="https://github.com/apderahmanweal-del" class="btn btn-outline-info m-1">GitHub</a>
+        <a href="https://www.linkedin.com/in/abderahman-weal/" class="btn btn-outline-info m-1">LinkedIn</a>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="text-center p-3 bg-dark">
+    <p>© 2026 Abderahman | Back-End Developer</p>
+</footer>
+
+</body>
+</html>
