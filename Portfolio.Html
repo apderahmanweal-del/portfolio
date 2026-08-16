@@ -1,174 +1,622 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<title>Abderahman | Back-End Developer</title>
+    <meta charset="UTF-8">
 
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-<style>
-body {
-    background: #0f172a;
-    color: white;
-    scroll-behavior: smooth;
-}
+    <title>Abderahman | Back-End Developer</title>
 
-/* HERO */
-.hero {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    flex-direction: column;
-}
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+          rel="stylesheet">
 
-.hero h1 {
-    font-size: 3rem;
-}
+    <style>
 
-.hero span {
-    color: #38bdf8;
-}
+        body {
+            background: #0f172a;
+            color: white;
+            scroll-behavior: smooth;
+        }
 
-/* CARDS */
-.box {
-    background: #1e293b;
-    padding: 20px;
-    border-radius: 15px;
-    transition: 0.3s;
-    height: 100%;
-}
+        /* ================= HERO ================= */
 
-.box:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
-}
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            flex-direction: column;
+            padding: 20px;
+        }
 
-/* SECTION TITLE */
-.section-title {
-    margin-bottom: 30px;
-    color: #38bdf8;
-}
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: bold;
+        }
 
-/* NAV */
-.navbar {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
+        .hero span {
+            color: #38bdf8;
+        }
 
-/* FADE EFFECT */
-.fade-in {
-    animation: fadeIn 1.2s ease-in;
-}
+        .hero h4 {
+            margin-top: 10px;
+            color: #cbd5e1;
+        }
 
-@keyframes fadeIn {
-    from {opacity: 0; transform: translateY(20px);}
-    to {opacity: 1; transform: translateY(0);}
-}
-</style>
+        .hero p {
+            color: #94a3b8;
+            margin-top: 15px;
+        }
+
+        .btn-custom {
+            margin: 8px;
+            padding: 10px 20px;
+        }
+
+        /* ================= CARDS ================= */
+
+        .box {
+            background: #1e293b;
+            padding: 25px;
+            border-radius: 15px;
+            transition: 0.3s;
+            height: 100%;
+            border: 1px solid #334155;
+        }
+
+        .box:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+        }
+
+        .box h4 {
+            color: #38bdf8;
+            margin-bottom: 15px;
+        }
+
+        .box p {
+            color: #cbd5e1;
+            line-height: 1.7;
+        }
+
+        /* ================= PROJECTS ================= */
+
+        .project-card {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-description {
+            flex-grow: 1;
+        }
+
+        .tech {
+            margin-top: 15px;
+            margin-bottom: 20px;
+        }
+
+        .tech span {
+            display: inline-block;
+            background: #0f172a;
+            color: #38bdf8;
+            border: 1px solid #38bdf8;
+            border-radius: 20px;
+            padding: 5px 10px;
+            margin: 3px;
+            font-size: 13px;
+        }
+
+        /* ================= SECTION TITLE ================= */
+
+        .section-title {
+            margin-bottom: 30px;
+            color: #38bdf8;
+            font-weight: bold;
+        }
+
+        /* ================= NAVBAR ================= */
+
+        .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar a {
+            text-decoration: none;
+        }
+
+        /* ================= FADE EFFECT ================= */
+
+        .fade-in {
+            animation: fadeIn 1.2s ease-in;
+        }
+
+        @keyframes fadeIn {
+
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+        }
+
+        /* ================= FOOTER ================= */
+
+        footer {
+            margin-top: 70px;
+        }
+
+    </style>
+
 </head>
+
 
 <body>
 
-<!-- NAVBAR -->
+
+<!-- ================= NAVBAR ================= -->
+
 <nav class="navbar navbar-dark bg-dark px-4">
-    <a class="navbar-brand" href="#">Portfolio</a>
+
+    <a class="navbar-brand fw-bold"
+       href="#">
+        Abderahman
+    </a>
+
     <div>
-        <a href="#about" class="text-white mx-2">About</a>
-        <a href="#projects" class="text-white mx-2">Projects</a>
-        <a href="#contact" class="text-white mx-2">Contact</a>
+
+        <a href="#about"
+           class="text-white mx-2">
+            About
+        </a>
+
+        <a href="#projects"
+           class="text-white mx-2">
+            Projects
+        </a>
+
+        <a href="#contact"
+           class="text-white mx-2">
+            Contact
+        </a>
+
     </div>
+
 </nav>
 
-<!-- HERO -->
+
+<!-- ================= HERO ================= -->
+
 <section class="hero fade-in">
-    <h1>Hi, I'm <span>Abderahman</span></h1>
-    <h4>Back-End Developer (.NET)</h4>
-    <p>I build scalable web applications using ASP.NET Core & SQL Server</p>
+
+    <h1>
+        Hi, I'm
+        <span>Abderahman</span>
+    </h1>
+
+    <h4>
+        Back-End Developer (.NET)
+    </h4>
+
+    <p>
+        I build scalable web applications using
+        ASP.NET Core & SQL Server
+    </p>
 
     <div>
-        <a href="#projects" class="btn btn-info btn-custom">View Projects</a>
-        <a href="#contact" class="btn btn-outline-info btn-custom">Contact Me</a>
+
+        <a href="#projects"
+           class="btn btn-info btn-custom">
+            View Projects
+        </a>
+
+        <a href="#contact"
+           class="btn btn-outline-info btn-custom">
+            Contact Me
+        </a>
+
     </div>
+
 </section>
 
-<!-- ABOUT -->
-<section id="about" class="container my-5 fade-in">
-    <h2 class="section-title">About Me</h2>
+
+<!-- ================= ABOUT ================= -->
+
+<section id="about"
+         class="container my-5 fade-in">
+
+    <h2 class="section-title">
+        About Me
+    </h2>
 
     <div class="box">
+
         <p>
-            I'm a Computer Science student, expected to graduate in 2027.
-            I specialize in Back-End Development using ASP.NET Core MVC & Web API.
+            I'm a Computer Science student, expected to
+            graduate in 2027. I specialize in Back-End
+            Development using ASP.NET Core MVC & Web API.
         </p>
 
         <p>
-           I am a Back-End Developer with hands-on experience in ASP.NET Core MVC and Web API development, using Entity Framework Core and SQL Server. I build real-world applications with authentication, authorization, and full CRUD operations.
+            I am a Back-End Developer with hands-on experience
+            in ASP.NET Core MVC and Web API development,
+            using Entity Framework Core and SQL Server.
+            I build real-world applications with authentication,
+            authorization, and full CRUD operations.
         </p>
+
     </div>
+
 </section>
 
-<!-- PROJECTS -->
-<section id="projects" class="container my-5 fade-in">
-    <h2 class="section-title">Projects</h2>
+
+<!-- ================= PROJECTS ================= -->
+
+<section id="projects"
+         class="container my-5 fade-in">
+
+    <h2 class="section-title">
+        Projects
+    </h2>
+
 
     <div class="row g-4">
 
-        <div class="col-md-4">
-            <div class="box">
-                <h4>Employee System</h4>
-                <p>CRUD + Search + Pagination + Login System using ASP.NET MVC</p>
+
+        <!-- PROJECT 1 -->
+
+        <div class="col-md-6 col-lg-4">
+
+            <div class="box project-card">
+
+                <h4>
+                    Employee System
+                </h4>
+
+                <p class="project-description">
+
+                    Employee management system built with
+                    ASP.NET MVC. Includes CRUD operations,
+                    search, pagination and authentication.
+
+                </p>
+
+                <div class="tech">
+
+                    <span>C#</span>
+                    <span>ASP.NET MVC</span>
+                    <span>EF Core</span>
+                    <span>SQL Server</span>
+
+                </div>
+
+                <a href="#"
+                   target="_blank"
+                   class="btn btn-outline-info">
+
+                    GitHub →
+
+                </a>
+
             </div>
+
         </div>
 
-        <div class="col-md-4">
-            <div class="box">
-                <h4>Student & Department</h4>
-                <p>EF Core Code First + Relationships + AJAX Search + Validation</p>
+
+        <!-- PROJECT 2 -->
+
+        <div class="col-md-6 col-lg-4">
+
+            <div class="box project-card">
+
+                <h4>
+                    Student & Department
+                </h4>
+
+                <p class="project-description">
+
+                    Student management system using Entity
+                    Framework Core Code First with relationships,
+                    AJAX search and validation.
+
+                </p>
+
+                <div class="tech">
+
+                    <span>C#</span>
+                    <span>ASP.NET MVC</span>
+                    <span>EF Core</span>
+                    <span>AJAX</span>
+                    <span>SQL Server</span>
+
+                </div>
+
+                <a href="#"
+                   target="_blank"
+                   class="btn btn-outline-info">
+
+                    GitHub →
+
+                </a>
+
             </div>
+
         </div>
 
-        <div class="col-md-4">
-            <div class="box">
-                <h4>T-Shirt Store</h4>
-                <p>E-commerce project with Cart, Checkout & Payment pages</p>
+
+        <!-- PROJECT 3 -->
+
+        <div class="col-md-6 col-lg-4">
+
+            <div class="box project-card">
+
+                <h4>
+                    T-Shirt Store
+                </h4>
+
+                <p class="project-description">
+
+                    E-commerce web application with products,
+                    shopping cart, checkout and payment pages.
+
+                </p>
+
+                <div class="tech">
+
+                    <span>C#</span>
+                    <span>ASP.NET MVC</span>
+                    <span>EF Core</span>
+                    <span>SQL Server</span>
+                    <span>Bootstrap</span>
+                    <span>JavaScript</span>
+
+                </div>
+
+                <a href="#"
+                   target="_blank"
+                   class="btn btn-outline-info">
+
+                    GitHub →
+
+                </a>
+
             </div>
+
         </div>
+
+
+        <!-- PROJECT 4 -->
+
+        <div class="col-md-6 col-lg-4">
+
+            <div class="box project-card">
+
+                <h4>
+                    Luxury Fashion E-Commerce
+                </h4>
+
+                <p class="project-description">
+
+                    Luxury fashion e-commerce web application
+                    built with ASP.NET Core MVC, Entity Framework
+                    Core and SQL Server.
+
+                </p>
+
+                <div class="tech">
+
+                    <span>ASP.NET Core MVC</span>
+                    <span>EF Core</span>
+                    <span>SQL Server</span>
+                    <span>Bootstrap</span>
+                    <span>JavaScript</span>
+
+                </div>
+
+                <a href="https://github.com/apderahmanweal-del/Luxury-Fashion-E-Commerce"
+                   target="_blank"
+                   class="btn btn-outline-info">
+
+                    GitHub →
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- PROJECT 5 -->
+
+        <div class="col-md-6 col-lg-4">
+
+            <div class="box project-card">
+
+                <h4>
+                    AgriLand
+                </h4>
+
+                <p class="project-description">
+
+                    Agricultural management platform built with
+                    ASP.NET Core MVC. Includes land management,
+                    crops, irrigation, fertilization and revenues.
+
+                </p>
+
+                <div class="tech">
+
+                    <span>C#</span>
+                    <span>ASP.NET Core MVC</span>
+                    <span>EF Core</span>
+                    <span>SQL Server</span>
+                    <span>Bootstrap</span>
+                    <span>JavaScript</span>
+
+                </div>
+
+                <a href="#"
+                   target="_blank"
+                   class="btn btn-outline-info">
+
+                    GitHub →
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- PROJECT 6 -->
+
+        <div class="col-md-6 col-lg-4">
+
+            <div class="box project-card">
+
+                <h4>
+                    Instructor Management System
+                </h4>
+
+                <p class="project-description">
+
+                    ASP.NET Core MVC application for managing
+                    instructors, departments and courses with
+                    CRUD operations and Entity Framework Core.
+
+                </p>
+
+                <div class="tech">
+
+                    <span>C#</span>
+                    <span>ASP.NET Core MVC</span>
+                    <span>EF Core</span>
+                    <span>SQL Server</span>
+                    <span>Bootstrap</span>
+
+                </div>
+
+                <a href="#"
+                   target="_blank"
+                   class="btn btn-outline-info">
+
+                    GitHub →
+
+                </a>
+
+            </div>
+
+        </div>
+
 
     </div>
+
 </section>
 
-<!-- SKILLS -->
+
+<!-- ================= SKILLS ================= -->
+
 <section class="container my-5 fade-in">
-    <h2 class="section-title">Skills</h2>
+
+    <h2 class="section-title">
+        Skills
+    </h2>
 
     <div class="box">
-        <p><b>Backend:</b> C#, ASP.NET Core (MVC & Web API), Entity Framework Core, LINQ
-</p>
-        <p><b>Database:</b> SQL Server, LINQ</p>
-        <p><b>Tools:</b> Visual Studio, Git, GitHub</p>
+
+        <p>
+            <b>Backend:</b>
+            C#, ASP.NET Core (MVC & Web API),
+            Entity Framework Core, LINQ
+        </p>
+
+        <p>
+            <b>Database:</b>
+            SQL Server
+        </p>
+
+        <p>
+            <b>Frontend:</b>
+            HTML, CSS, JavaScript, Bootstrap
+        </p>
+
+        <p>
+            <b>Tools:</b>
+            Visual Studio, Git, GitHub
+        </p>
+
     </div>
+
 </section>
 
-<!-- CONTACT -->
-<section id="contact" class="container my-5 fade-in">
-    <h2 class="section-title">Contact</h2>
+
+<!-- ================= CONTACT ================= -->
+
+<section id="contact"
+         class="container my-5 fade-in">
+
+    <h2 class="section-title">
+        Contact
+    </h2>
 
     <div class="box text-center">
-        <p>Let's work together 🚀</p>
 
-        <a href="mailto:apderahmanweal@gmail.com" class="btn btn-info m-1">Email</a>
-        <a href="https://github.com/apderahmanweal-del" class="btn btn-outline-info m-1">GitHub</a>
-        <a href="https://www.linkedin.com/in/abderahman-weal/" class="btn btn-outline-info m-1">LinkedIn</a>
+        <p>
+            Let's work together 🚀
+        </p>
+
+
+        <a href="mailto:apderahmanweal@gmail.com"
+           class="btn btn-info m-1">
+
+            Email
+
+        </a>
+
+
+        <a href="https://github.com/apderahmanweal-del"
+           target="_blank"
+           class="btn btn-outline-info m-1">
+
+            GitHub
+
+        </a>
+
+
+        <a href="https://www.linkedin.com/in/abderahman-weal/"
+           target="_blank"
+           class="btn btn-outline-info m-1">
+
+            LinkedIn
+
+        </a>
+
     </div>
+
 </section>
 
-<!-- FOOTER -->
+
+<!-- ================= FOOTER ================= -->
+
 <footer class="text-center p-3 bg-dark">
-    <p>© 2026 Abderahman | Back-End Developer</p>
+
+    <p>
+        © 2026 Abderahman | Back-End Developer
+    </p>
+
 </footer>
 
+
 </body>
+
 </html>
